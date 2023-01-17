@@ -1,0 +1,26 @@
+.error404 {
+    @include flex-column();
+    justify-content: space-around;
+    row-gap: 8rem;
+    align-items: center;
+    color: #FF6060;
+    padding: 0 0 8rem;
+
+    &__error {
+        @include flex-column;
+        align-items: center;
+        &__404 {
+            font-size: 288px;
+        }
+
+        &__description {
+            font-size: 36px;
+        }
+    }
+
+    &__redirection {
+        color: #FF6060;
+        font-size: 18px;
+    }
+
+}

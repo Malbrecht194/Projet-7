@@ -4,8 +4,11 @@
 @import "scss/layouts/header";
 
 main{
-  max-width: 80%;
+  max-width: 1240px;
   margin: 0 auto 0;
 }
+
+// Page 404
+@import "scss/pages/error404";
 
 @import "scss/layouts/footer";
