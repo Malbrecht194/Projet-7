@@ -5,14 +5,19 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Error404 from './pages/Error404'
 import Home from './pages/Home'
 import DefaultLayout from './layouts/default'
+import About from './pages/About'
 
 const router = createBrowserRouter([{ 
     path : '/', 
-    element: <DefaultLayout/>,
+    element : <DefaultLayout/>,
     children: [
       {
         path : '',
-        element: <Home/>
+        element : <Home/>
+      },
+      {
+        path : 'about',
+        element : <About/> 
       }
     ],
     errorElement: <Error404/>

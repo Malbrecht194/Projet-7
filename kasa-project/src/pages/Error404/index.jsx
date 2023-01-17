@@ -1,5 +1,6 @@
 import Footer from "../../components/footer";
 import Header from "../../components/header";
+import { Link } from "react-router-dom";
 
 export default function Error404() {
     return (
@@ -12,11 +13,10 @@ export default function Error404() {
                         Oups! La page que vous demandez n'existe pas.
                     </h3>
                 </div>
-                <a href="/" >
-                    <p className="erorr404__redirection">
-                        Retourner sur la page d’accueil
-                    </p>
-                </a>
+                <Link to='/' className="error404__redirection">
+                    Retourner sur la page d’accueil
+                </Link>
+
             </section>
             <Footer />
         </>
