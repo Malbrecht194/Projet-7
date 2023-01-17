@@ -1,0 +1,11 @@
+.footer{
+    @include flex-column();
+    align-items: center;
+    padding: 3rem 0 3rem;
+    row-gap: 2rem;
+    background-color: black;
+    color: white;
+    &__title{
+        font-size: 1.5rem;
+    }
+}

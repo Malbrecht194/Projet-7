@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 0;
+    padding: 3rem 0 3rem;
+
+    &__nav {
+        display: flex;
+        column-gap: 3rem;
+
+        &__item {
+            font-size: 22px;
+            color: #FF6060;
+        }
+
+    }
+}

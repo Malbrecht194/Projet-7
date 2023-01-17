@@ -1,0 +1,11 @@
+@import "scss/bases/bases";
+@import "scss/utils/mixins";
+
+@import "scss/layouts/header";
+
+main{
+  max-width: 80%;
+  margin: 0 auto 0;
+}
+
+@import "scss/layouts/footer";
