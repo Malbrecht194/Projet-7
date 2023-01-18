@@ -1,0 +1,14 @@
+@import "../../scss/utils/mixins.scss";
+@import "../../scss/utils/variables.scss";
+.banner {
+    display: flex;
+    justify-content: center;
+    background-image: url("../../assets/banner.png");
+
+    &__container {
+        &__text {
+            font-size: 24px;
+            // color: white;
+        }
+    }
+}

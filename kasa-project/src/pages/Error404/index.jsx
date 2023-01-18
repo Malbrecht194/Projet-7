@@ -1,6 +1,7 @@
 import Footer from "../../components/footer";
 import Header from "../../components/header";
 import { Link } from "react-router-dom";
+import "./error404.scss"
 
 export default function Error404() {
     return (

@@ -1,15 +1,16 @@
 import Footer from "../../components/footer"
-import {Outlet} from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import Header from "../../components/header"
+import "./defaultLayout.scss"
 
-export default function DefaultLayout(){
+export default function DefaultLayout() {
     return (
         <>
-        <main>
-            <Header/>
-            <Outlet/>
-        </main>
-        <Footer/>
+            <Header />
+            <main>
+                <Outlet />
+            </main>
+            <Footer />
         </>
     )
 }

@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client'
 import './index.scss'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Error404 from './pages/Error404'
-import Home from './pages/Home'
+import Home, {loader as homeLoader} from './pages/Home'
 import DefaultLayout from './layouts/default'
 import About from './pages/About'
+import FicheLogement, {loader as logementLoader} from './pages/Fiche_logement'
 
 const router = createBrowserRouter([{ 
     path : '/', 
@@ -13,11 +14,17 @@ const router = createBrowserRouter([{
     children: [
       {
         path : '',
-        element : <Home/>
+        element : <Home/>,
+        loader : homeLoader
       },
       {
-        path : 'about',
+        path : 'a-propos',
         element : <About/> 
+      },
+      {
+        path : ':id',
+        element : <FicheLogement/>,
+        loader : logementLoader
       }
     ],
     errorElement: <Error404/>

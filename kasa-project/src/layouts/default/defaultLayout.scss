@@ -1,0 +1,12 @@
+@import "../../scss/utils/mixins.scss";
+@import "../../scss/utils/variables.scss";
+#root {
+    display: grid;
+    grid-template-rows: auto 1fr auto ;
+    width: 100%;
+    min-height: 100vh;
+
+    &>*{
+        width: 100%;
+    }
+}

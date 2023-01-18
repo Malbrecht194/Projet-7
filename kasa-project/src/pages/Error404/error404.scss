@@ -1,10 +1,11 @@
+@import "../../scss/utils/mixins.scss";
+@import "../../scss/utils/variables.scss";
 .error404 {
     @include flex-column();
     justify-content: space-around;
     row-gap: 8rem;
     align-items: center;
     color: #FF6060;
-    padding: 0 0 8rem;
 
     &__error {
         @include flex-column;
@@ -21,6 +22,7 @@
     &__redirection {
         color: #FF6060;
         font-size: 18px;
+        text-decoration: underline;
     }
 
 }
