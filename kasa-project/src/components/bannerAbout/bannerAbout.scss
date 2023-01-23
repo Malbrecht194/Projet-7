@@ -1,2 +1,9 @@
 @import "../../scss/utils/mixins.scss";
 @import "../../scss/utils/variables.scss";
+
+.bannerAbout{
+    background: rgba(0, 0, 0, 0.3) url("../../assets/bannerAbout.png");
+    background-blend-mode: darken;
+    height: 223px;
+    border-radius: 25px;
+}

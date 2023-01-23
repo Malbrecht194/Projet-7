@@ -1,4 +1,6 @@
+import { useLoaderData } from "react-router-dom"
 import "./ficheLogement.scss"
+
 
 export default function FicheLogement() {
     const apartment = useLoaderData() // normal

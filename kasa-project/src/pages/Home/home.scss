@@ -1,2 +1,13 @@
 @import "../../scss/utils/mixins.scss";
 @import "../../scss/utils/variables.scss";
+
+.cardsContainer{
+    
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    gap: 60px;
+    border-radius: 25px;
+    margin: 5rem 0 5rem;
+    padding: 3rem;
+    background: #F7F7F7;
+}

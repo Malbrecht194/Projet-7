@@ -1,2 +1,24 @@
 @import "../../scss/utils/mixins.scss";
 @import "../../scss/utils/variables.scss";
+
+.collapse{
+    $collapse : &;
+    
+    &__content{
+        display: none;
+    }
+
+    &[data-open=true]{
+        #{$collapse}{
+            &__content{
+                display: block;
+            } 
+        }
+    }
+
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        background: blue;
+    }
+}

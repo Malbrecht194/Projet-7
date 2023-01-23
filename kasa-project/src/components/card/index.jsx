@@ -1,8 +1,9 @@
 import "./card.scss"
-export default function Card({appartement}) { //objet qui contien toute les infos
+export default function Card({ apartment }) { //objet qui contien toute les infos
     return (
         <div className="card">
-            {appartement.title}
+            <img className="card__img" src={apartment.cover} alt="Logement" />
+            <h3 className="card__title"> {apartment.title} </h3>
         </div>
     )
 }
