@@ -1,24 +1,54 @@
 @import "../../scss/utils/mixins.scss";
 @import "../../scss/utils/variables.scss";
 
-.collapse{
+.collapse {
     $collapse : &;
-    
-    &__content{
+    position: relative;
+    overflow: hidden;
+
+    margin: 2rem 0 2rem;
+
+    &__content {
         display: none;
+        text-align: justify;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 142.6%;
+        border-radius: 5px;
+        padding: 1rem;
+        background: map-get($map: $colors, $key: fondGris);
+        color: map-get($map: $colors, $key: couleurPrimaire);
     }
 
-    &[data-open=true]{
-        #{$collapse}{
-            &__content{
+    &[data-open=true] {
+        #{$collapse} {
+            &__content {
                 display: block;
-            } 
+            }
         }
     }
 
-    &__title{
+    &__title {
+        z-index: 1;
         display: flex;
         justify-content: space-between;
-        background: blue;
+        align-items: center;
+        color: white;
+        padding: 0.5rem 1rem 0.5rem;
+        background: map-get($map: $colors, $key: couleurPrimaire);
+        border-radius: 5px;
+
+        &__text {
+            font-weight: 500;
+            font-size: 24px;
+        }
+
+        &__img {
+            height: 15px;
+            width: 24px;
+        }
+        &__img:hover{
+            cursor: pointer;
+        }
     }
 }

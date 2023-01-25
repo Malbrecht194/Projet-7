@@ -9,12 +9,16 @@
     overflow: hidden;
     position: relative;
 
+    transform: scale(1.00);
+    transition: transform 0.4s;
+
+
     &__img {
         object-fit: cover;
         height: 100%;
     }
 
-    &__title{
+    &__title {
         display: flex;
         align-items: flex-end;
         position: absolute;
@@ -28,4 +32,9 @@
         font-size: 18px;
         padding: 15px 20px 20px;
     }
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s;
 }

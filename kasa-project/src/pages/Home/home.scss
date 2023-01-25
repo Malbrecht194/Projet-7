@@ -9,5 +9,5 @@
     border-radius: 25px;
     margin: 5rem 0 5rem;
     padding: 3rem;
-    background: #F7F7F7;
+    background: map-get($map: $colors, $key: fondGris);
 }

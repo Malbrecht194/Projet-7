@@ -8,17 +8,18 @@ export default function Home() {
 
     return (
         <>
-            <Banner />
+            <section className="home">
+                <Banner />
+                <div className="cardsContainer">
 
-            <div className="cardsContainer">
+                    {apartments.map(apartment => (
+                        <Link to={apartment.id} key={apartment.id}>
+                            <Card apartment={apartment} />
+                        </Link>
+                    ))}
 
-                {apartments.map(apartment => (
-                    <Link to={apartment.id} key={apartment.id}>
-                        <Card apartment={apartment} />
-                    </Link>
-                ))}
-
-            </div>
+                </div>
+            </section>
         </>
     )
 }

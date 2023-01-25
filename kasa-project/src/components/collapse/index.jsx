@@ -11,7 +11,7 @@ export default function Collapse({ title, children  }) {
         <div className="collapse" data-open={isOpen}>
             <div className="collapse__title">
                 <h3 className="collapse__title__text">{title}</h3>
-                <img src={Toggle} alt="Toggle" onClick={() => setOpen(!isOpen)} />
+                <img className="collapse__title__img" src={Toggle} alt="Toggle" onClick={() => setOpen(!isOpen)} />
             </div>
             <div className="collapse__content">{children}</div>
         </div>
