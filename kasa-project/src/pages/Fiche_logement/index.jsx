@@ -1,6 +1,8 @@
 import { useEffect } from "react"
 import { useLoaderData, useNavigate } from "react-router-dom"
+import Collapse from "../../components/collapse"
 import Host from "../../components/host"
+import Rate from "../../components/rating"
 import Tag from "../../components/tag"
 import "./ficheLogement.scss"
 
@@ -32,14 +34,20 @@ export default function FicheLogement() {
                             />
                         </div>
                         <div className="apartment__host__rating">
-
+                            <Rate score={apart.rating}/>
                         </div>
 
                     </div>
 
                 </div>
-                <div className="">
-
+                <div className="apartment__collapses">
+                    <Collapse title='Description' >
+                        {apart.description}
+                    </Collapse>
+                    
+                    <Collapse title='Equipements' >
+                        {apart.equipments}
+                    </Collapse>
                 </div>
 
             </section>
