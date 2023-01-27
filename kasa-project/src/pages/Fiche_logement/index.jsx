@@ -1,5 +1,4 @@
-import { useEffect } from "react"
-import { useLoaderData, useNavigate } from "react-router-dom"
+import { useLoaderData } from "react-router-dom"
 import Collapse from "../../components/collapse"
 import Host from "../../components/host"
 import Rate from "../../components/rating"
@@ -9,6 +8,13 @@ import "./ficheLogement.scss"
 
 export default function FicheLogement() {
     const apart = useLoaderData()
+    const tags = apart.tags
+    const equipments =
+        apart.equipments.map((item, index) => (
+            <li key={index} className="equipList">
+                {item}
+            </li>
+        ))
 
     return (
         <>
@@ -20,9 +26,9 @@ export default function FicheLogement() {
                         <h1>{apart.title}</h1>
                         <h3>{apart.location}</h3>
                         <div className="apartment__infos__tags">
-                            {apart.tags.map(tag => {
-                                <Tag tag={tag} />
-                            })}
+                            {tags.map((tag) => (
+                                <Tag key={tag} tag={tag} />
+                            ))}
                         </div>
                     </div>
 
@@ -34,7 +40,7 @@ export default function FicheLogement() {
                             />
                         </div>
                         <div className="apartment__host__rating">
-                            <Rate score={apart.rating}/>
+                            <Rate score={apart.rating} />
                         </div>
 
                     </div>
@@ -44,12 +50,11 @@ export default function FicheLogement() {
                     <Collapse title='Description' >
                         {apart.description}
                     </Collapse>
-                    
-                    <Collapse title='Equipements' >
-                        {apart.equipments}
+
+                    <Collapse title='Equipements'>
+                        {equipments}
                     </Collapse>
                 </div>
-
             </section>
         </>
     )
