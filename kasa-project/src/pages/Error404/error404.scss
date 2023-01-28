@@ -3,19 +3,34 @@
 .error404 {
     @include flex-column();
     justify-content: space-around;
-    row-gap: 8rem;
     align-items: center;
     color: #FF6060;
 
     &__error {
         @include flex-column;
         align-items: center;
+        padding: 0 1rem 0;
         &__404 {
             font-size: 288px;
+            @include mobile(){
+                font-size: 144px;
+            }
+            @include tablette(){
+                font-size: 216px;
+            }
         }
 
         &__description {
+            font-weight: 500;
             font-size: 36px;
+            text-align: center;
+            @include mobile(){
+                font-size: 26px;
+                width: 20rem;
+            }
+            @include tablette(){
+                font-size: 30px;
+            }
         }
     }
 
@@ -23,6 +38,10 @@
         color: #FF6060;
         font-size: 18px;
         text-decoration: underline;
+        margin: 10rem 0 10rem;
+        @include mobile(){
+            margin: 5rem 0 5rem;
+        }
     }
 
 }
