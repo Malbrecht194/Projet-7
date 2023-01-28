@@ -1,5 +1,6 @@
 import emptyStar from "../../assets/emptyStar.png";
 import fullStar from "../../assets/fullStar.png";
+import './rating.scss'
 
 export default function Rate({ score }) {
 	const stars = [1, 2, 3, 4, 5];

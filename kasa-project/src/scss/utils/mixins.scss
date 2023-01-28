@@ -2,3 +2,25 @@
     display: flex;
     flex-direction: column;
 }
+
+@mixin bigBorder-radius {
+    border-radius: 25px;
+}
+
+@mixin mobile {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin tablette {
+    @media screen and (max-width: map-get($breakpoints, tablette-max)) and (min-width: map-get($breakpoints, tablette)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}

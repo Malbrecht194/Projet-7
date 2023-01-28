@@ -13,7 +13,7 @@ export default function Home() {
                 <div className="cardsContainer">
 
                     {apartments.map(apartment => (
-                        <Link to={apartment.id} key={apartment.id}>
+                        <Link to={apartment.id} key={apartment.id} className="cardsContainer__link">
                             <Card apartment={apartment} />
                         </Link>
                     ))}

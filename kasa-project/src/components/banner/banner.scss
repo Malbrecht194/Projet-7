@@ -7,14 +7,32 @@
     align-items: center;
     background: rgba(0, 0, 0, 0.3) url("../../assets/banner.png");
     background-blend-mode: darken;
-    height: 223px;
+    height: 14rem;
     border-radius: 25px;
+    margin: map-get($map: $espacements, $key: bodyMargin);
+
+    @include mobile() {
+        height: 7rem;
+    }
+
+    @include tablette() {
+        height: 10rem;
+    }
 
     &__container {
         &__text {
             font-weight: 500;
             font-size: 48px;
             color: white;
+
+            @include mobile() {
+                padding: 1rem;
+                font-size: 28px;
+            }
+
+            @include tablette() {
+                font-size: 38px;
+            }
         }
     }
 }

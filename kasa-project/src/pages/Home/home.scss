@@ -1,13 +1,27 @@
 @import "../../scss/utils/mixins.scss";
 @import "../../scss/utils/variables.scss";
 
-.cardsContainer{
-    
+.cardsContainer {
     display: grid;
-    grid-template-columns: repeat(3, 340px);
-    gap: 60px;
-    border-radius: 25px;
-    margin: 5rem 0 5rem;
+    gap: 3rem;
     padding: 3rem;
+    margin: 2.5rem 0 2.5rem;
+    
+    @include bigBorder-radius();
     background: map-get($map: $colors, $key: fondGris);
+
+    @include desktop() {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include tablette() {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mobile() {
+        grid-template-columns: 2fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        margin: 0;
+    }
 }
