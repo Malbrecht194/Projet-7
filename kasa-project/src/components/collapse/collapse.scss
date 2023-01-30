@@ -9,16 +9,28 @@
 
     margin: 2rem 0 2rem;
 
+    @include mobile(){
+        margin: 1rem 0 1rem
+    }
+
     &__content {
         display: none;    
         text-align: justify;
         font-weight: 400;
-        font-size: 24px;
         line-height: 142.6%;
         border-radius: 5px;
         padding: 1rem;
         background: map-get($map: $colors, $key: fondGris);
         color: map-get($map: $colors, $key: couleurPrimaire);
+        @include mobile(){
+            font-size: 18px;
+        }
+        @include tablette(){
+            font-size: 22px;
+        }
+        @include desktop(){
+            font-size: 24px;
+        }
     }
 
     &[data-open=true] {
@@ -40,12 +52,30 @@
 
         &__text {
             font-weight: 500;
-            font-size: 24px;
+            @include mobile(){
+                font-size: 18px;
+            }
+            @include tablette(){
+                font-size: 22px;
+            }
+            @include desktop(){
+                font-size: 24px;
+            }
         }
 
         &__img {
-            height: 15px;
-            width: 24px;
+            @include mobile(){
+                height: 9px;
+                width: 18px;
+            }
+            @include tablette(){
+                height: 12px;
+                width: 21px;
+            }
+            @include desktop(){
+                height: 15px;
+                width: 24px;
+            }
         }
         &__img:hover{
             cursor: pointer;

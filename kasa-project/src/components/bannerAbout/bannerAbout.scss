@@ -11,7 +11,7 @@
     margin: map-get($map: $espacements, $key: bodyMargin);
 
     @include mobile() {
-        background: url("../../assets/bannerAboutPhone.png");
+        background: rgba(0, 0, 0, 0.3) url("../../assets/bannerAboutPhone.png");
         background-repeat: no-repeat;
         background-size: cover;
         height: 18rem;

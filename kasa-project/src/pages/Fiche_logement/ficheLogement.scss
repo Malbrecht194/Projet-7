@@ -3,17 +3,33 @@
 
 .apartment {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    margin: map-get($map: $espacements, $key: bodyMargin);
 
+    @include mobile(){
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    @include tablette(){
+        align-items: center;
+    }
+
+    @include desktop(){
+        align-items: center;
+    }
     &__infos {
         display: flex;
         flex-direction: column;
+        row-gap: 1rem;
 
         h1 {
             font-weight: 500;
             font-size: 36px;
             color: map-get($map: $colors, $key: couleurPrimaire);
+            @include mobile(){
+                font-size: 30px;
+            }
         }
 
         h3 {
@@ -30,11 +46,32 @@
     }
 
     &__host {
+        display: flex;
+        flex-direction: column;
         row-gap: 1rem;
+        @include mobile(){
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     &__collapses {
         display: flex;
-        column-gap: 5rem;
+        margin: map-get($map: $espacements, $key:bodyMargin );
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+
+        @include mobile() {
+            flex-direction: column;
+        }
+
+        @include desktop() {
+            column-gap: 5rem;
+        }
+
+        @include tablette() {
+            column-gap: 3rem;
+        }
     }
 }

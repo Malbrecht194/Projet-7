@@ -16,9 +16,19 @@
     &__img {
 
         img {
-            width: 64px;
-            height: 64px;
             border-radius: 50%;
+            @include mobile(){
+                width: 3rem;
+                height: 3rem;
+            }
+            @include tablette(){
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+            @include desktop(){
+                width: 4rem;
+                height: 4rem;
+            }
         }
     }
 }

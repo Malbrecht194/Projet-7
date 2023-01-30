@@ -10,14 +10,14 @@ export default function Rate({ score }) {
 				score >= rate ? (
 					<img
 						key={rate.toString()}
-						className="star"
+						className="ratingBar__star"
 						src={fullStar}
 						alt="rating star"
 					/>
 				) : ( //affichage conditionnel des étoiles de score, pleine ou vide selon le score passé en props
 					<img
 						key={rate.toString()}
-						className="star"
+						className="ratingBar__star"
 						src={emptyStar}
 						alt="rating star"
 					/>
