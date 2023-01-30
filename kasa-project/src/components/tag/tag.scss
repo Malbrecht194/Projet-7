@@ -4,6 +4,8 @@
 .container {
 
     &__tag {
+        display: flex;
+        flex-wrap: nowrap;
         background-color: map-get($map: $colors, $key: couleurPrimaire);
         border-radius: 10px;
         font-weight: 500;

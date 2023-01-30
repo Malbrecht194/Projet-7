@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom"
+import Carrousel from "../../components/carrousel"
 import Collapse from "../../components/collapse"
 import Host from "../../components/host"
 import Rate from "../../components/rating"
@@ -20,7 +21,9 @@ export default function FicheLogement() {
         <>
             <section className="ficheLogement">
 
-                <div className="carrousel"></div>
+                <div className="carrousel">
+                    <Carrousel slides={apart.pictures}/>
+                </div>
                 <div className="apartment">
                     <div className="apartment__infos">
                         <h1>{apart.title}</h1>

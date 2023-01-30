@@ -1,2 +1,63 @@
 @import "../../scss/utils/mixins.scss";
 @import "../../scss/utils/variables.scss";
+
+.carrousel {
+    background-color: aqua;
+    position: relative;
+
+    @include mobile() {
+        height: 21rem;
+    }
+
+    @include desktop() {
+        height: 25rem;
+    }
+
+    @include tablette() {
+        height: 23rem;
+    }
+
+    &__slide {
+        width: 100%;
+        object-fit: cover;
+
+        @include mobile() {
+            height: 21rem;
+        }
+
+        @include desktop() {
+            height: 25rem;
+        }
+
+        @include tablette() {
+            height: 23rem;
+        }
+    }
+
+    &__leftArrow {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        translate: 0 -50%;
+    }
+
+    &__rightArrow {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        translate: 0 -50%;
+    }
+
+    &__leftArrow:hover,
+    &__rightArrow:hover {
+        cursor: pointer;
+    }
+
+    &__count {
+        position: absolute;
+        bottom: 1rem;
+        right: 50%;
+        color: #FFFFFF;
+        font-size: 18px;
+    }
+}
