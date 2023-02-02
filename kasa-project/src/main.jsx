@@ -8,7 +8,7 @@ import Home, {loader as homeLoader} from './pages/Home'
 import FicheLogement, {loader as logementLoader} from './pages/Fiche_logement'
 import About, {loader as aboutloader} from './pages/About'
 
-const router = createBrowserRouter([{ 
+const router = createBrowserRouter([{ // Création du router
     path : '/', 
     element : <DefaultLayout/>,
     children: [

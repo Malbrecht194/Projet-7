@@ -1,5 +1,5 @@
 import "./card.scss"
-export default function Card({ apartment }) { //objet qui contien toute les infos
+export default function Card({ apartment }) { 
     return (
         <div className="card">
             <img className="card__img" src={apartment.cover} alt="Logement" />

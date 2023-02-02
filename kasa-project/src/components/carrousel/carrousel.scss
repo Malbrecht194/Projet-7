@@ -2,7 +2,6 @@
 @import "../../scss/utils/variables.scss";
 
 .carrousel {
-    background-color: aqua;
     position: relative;
 
     @include mobile() {

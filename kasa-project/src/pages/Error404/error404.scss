@@ -4,7 +4,7 @@
     @include flex-column();
     justify-content: space-around;
     align-items: center;
-    color: #FF6060;
+    color: map-get($map: $colors, $key:couleurPrimaire );
 
     &__error {
         @include flex-column;
@@ -35,7 +35,7 @@
     }
 
     &__redirection {
-        color: #FF6060;
+        color: map-get($map: $colors, $key:couleurPrimaire );
         font-size: 18px;
         text-decoration: underline;
         margin: 10rem 0 10rem;

@@ -6,7 +6,7 @@ import { useState } from "react"
 export default function Carrousel({ slides }) {
     const [slide, setSlide] = useState(0)
     
-    const next = () => setSlide((slide + 1) % (slides.length) ) // A revoir les modulo avant la soutenance
+    const next = () => setSlide((slide + 1) % (slides.length) ) // Utilisation des modulo pour cycler les photos du carrousel
     const prev = () => setSlide(((slide - 1 ) + slides.length) % (slides.length))
 
     return (
